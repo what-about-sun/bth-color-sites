@@ -1,0 +1,237 @@
+<!doctype html>
+<title>Example</title>
+<style>
+#outer-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 135px);
+  grid-template-columns: repeat(5, 300px);
+  grid-gap: 5px;
+}
+#outer-grid > div {
+  background-color: #023047;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+#inner-grid1 {
+  display: grid;
+  grid-template-columns: 20% 10% 1fr 1fr;
+  grid-gap: 5px;
+}
+#inner-grid2 {
+  display: grid;
+  grid-template-columns: 30% 1fr 1fr 1fr 10%;
+  grid-gap: 5px;
+}
+#inner-grid3 {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 25%;
+  grid-gap: 5px;
+}
+#inner-grid4 {
+  display: grid;
+  grid-template-columns: 35% 1fr 1fr 1fr 20%;
+  grid-gap: 5px;
+}
+#inner-grid5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 25% 1fr 1fr;
+  grid-gap: 5px;
+}
+#inner-grid6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 35% 1fr 10%;
+  grid-gap: 5px;
+}
+
+</style>
+
+<script>
+function myFunction(){
+    var divs = document.getElementsByClassName("fach");
+    for(var i=0; i< divs.length; i++){
+        divs[i].style.backgroundColor = "lightblue";
+    }
+}
+
+function getNewColor() {
+    let symbols = '0123456789ABCDEF';
+    let color = '#'
+    for (let i = 0; i < 6; i++) { // Hex code can only go up to 6, so i < 6. This loop runs once for every function call.
+        color += symbols[Math.floor(Math.random() * 16)]; // 16 because of all the different possibilities in a hex code
+    }
+    var divs = document.getElementsByClassName("fach");
+    for(var i=0; i< divs.length; i++){
+        divs[i].style.backgroundColor = color;
+    }
+}
+</script>
+<div id="outer-grid">
+  <div id="inner-grid1">
+    <button onclick="getNewColor()" style="background-color:lightblue;">T R Y</button>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+  </div>
+  <div id="inner-grid2">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+  </div>
+  <div id="inner-grid3">
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+  </div>
+  <div id="inner-grid4">
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+  </div>
+  <div id="inner-grid5">
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+  </div>
+  <div id="inner-grid6">
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+  </div>
+  <div id="inner-grid4">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+  </div>
+  <div id="inner-grid2">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+  </div>
+  <div id="inner-grid3">
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+  </div>
+  <div id="inner-grid1">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+  </div>
+  <div id="inner-grid3">
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+  </div>
+  <div id="inner-grid6">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+  </div>
+  <div id="inner-grid1">
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+  </div>
+  <div id="inner-grid4">
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+  </div>
+  <div id="inner-grid5">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+  </div>
+  <div id="inner-grid2">
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+  </div>
+  <div id="inner-grid3">
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+  </div>
+  <div id="inner-grid4">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+  </div>
+  <div id="inner-grid6">
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+  </div>
+  <div id="inner-grid1">
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+  </div>
+  <div id="inner-grid6">
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+  </div>
+  <div id="inner-grid2">
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+  </div>
+  <div id="inner-grid5">
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+  </div>
+  <div id="inner-grid4">
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#2a9d8f;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+    <div class="fach" style="background-color:#e9c46a;"></div>
+  </div>
+  <div id="inner-grid2">
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#f4a261;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+    <div class="fach" style="background-color:#e76f51;"></div>
+    <div class="fach" style="background-color:#264653;"></div>
+  </div>
+</div>
